@@ -27,16 +27,18 @@
  ┃ ┃ ┣ 📜 RequestLoggingMiddleware.cs
  ┃ ┣ 📜 appsettings.json 
  ┣ 📂 Application (Business Logic Layer)
- ┃ ┣ 📜 IProductRepository.cs
- ┃ ┣ 📜 IProductService.cs
- ┃ ┣ 📜 ProductService.cs
+ ┃ ┣ 📂 Products
+ ┃ ┃ ┣ 📜 IProductRepository.cs
+ ┃ ┃ ┣ 📜 IProductService.cs
+ ┃ ┃ ┣ 📜 ProductService.cs
  ┣ 📂 Domain (Core Business Entities)
- ┃ ┣ 📜 Product.cs
+ ┃ ┣ 📂 Products
+ ┃ ┃ ┣ 📜 Product.cs
  ┣ 📂 Infrastructure (Data Persistence)
- ┃ ┣ 📂 Contexts
+ ┃ ┣ 📂 DbContexts
  ┃ ┃ ┣ 📜 AppDbContext.cs
  ┃ ┃ ┣ 📜 AppDbContextFactory.cs
- ┃ ┣ 📂 Repositories
+ ┃ ┣ 📂 Products
  ┃ ┃ ┣ 📜 ProductRepository.cs
  ┣ 📜 README.md
  ┣ 📜 .gitignore
@@ -61,7 +63,7 @@
 
 
 ### 2️⃣  Configure Database Connection if not using LocalDb
-✅ Modify appsettings.Development.json inside the API project:
+- Modify appsettings.Development.json inside the API project:
 ```
 {
   "ConnectionStrings": {
@@ -94,7 +96,7 @@ For sql server update similar to...
 - dotnet run --project API
 
 ### ▶️ Calling the endpoints
-✅ Run the application and use the API.http file
+- Run the application and use the API.http file
 
 ---
 
