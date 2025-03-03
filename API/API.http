@@ -1,0 +1,32 @@
+@API_HostAddress = http://localhost:5247
+
+### Get all products
+GET {{API_HostAddress}}/api/products/
+Accept: application/json
+
+### Get product by Id 
+GET {{API_HostAddress}}/api/products/2
+Accept: application/json
+
+### Create a new product
+POST {{API_HostAddress}}/api/products/
+Content-Type: application/json
+{
+  "name": "New Product",
+  "price": 0.99,
+  "stock": 88
+}
+
+### Update a product
+PUT {{API_HostAddress}}/api/products/3
+Content-Type: application/json
+{  
+  "id": 3,
+  "name": "1",
+  "price": 1.99,
+  "stock": 77
+}
+
+### Delete a product
+DELETE {{API_HostAddress}}/api/products/4
+Accept: application/json
